@@ -16,7 +16,7 @@ public class UtilsServant extends UnicastRemoteObject  implements UtilsService{
 		super();
 	}
 	
-	public  void buscaPorCurso(List<Pessoa> pessoas, String curso) {
+	public void buscaPorCurso(List<Pessoa> pessoas, String curso) {
 		
 		pessoas.stream().filter(item-> item.getFormacaoAcademica().equals(curso))
 				.forEach(item->System.out.println(item.getNome()+"| Email: "+item.getEmail()));
