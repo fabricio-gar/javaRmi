@@ -14,8 +14,7 @@ public class RmiStartServer {
 		Registry registry = LocateRegistry.createRegistry(5099);
 		
 		
-		Registry registry1 = LocateRegistry.getRegistry();
-		LocateRegistry.getRegistry();
+		Registry registry1 = LocateRegistry.getRegistry(50100);
 		registry.rebind("hello", new HelloServant());
 		registry1.rebind("utils", new UtilsServant());
 	
