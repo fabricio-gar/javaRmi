@@ -9,8 +9,13 @@ import java.rmi.registry.Registry;
 public class RmiStartServer {
 
 	public static void main(String[] args) throws RemoteException {
+		
+
 		Registry registry = LocateRegistry.createRegistry(5099);
-		Registry registry1 = LocateRegistry.createRegistry(5100);
+		
+		
+		Registry registry1 = LocateRegistry.getRegistry();
+		LocateRegistry.getRegistry();
 		registry.rebind("hello", new HelloServant());
 		registry1.rebind("utils", new UtilsServant());
 	
