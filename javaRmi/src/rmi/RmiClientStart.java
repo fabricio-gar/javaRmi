@@ -42,7 +42,7 @@ public class RmiClientStart {
 				String email = JOptionPane
 						.showInputDialog("Qual o Email da pesso que \n deseja acrescentar uma experiência?");
 				String experiencia = JOptionPane
-						.showInputDialog("Qual o Email da pesso que \n deseja acrescentar uma experiência?");
+						.showInputDialog("Digite a experiência a ser adicionada");
 				utils.adicionaExperienciaPorEmail(buscaPessoas, email, experiencia);
 				break;
 			}
