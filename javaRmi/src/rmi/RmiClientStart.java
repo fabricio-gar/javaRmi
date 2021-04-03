@@ -12,7 +12,7 @@ public class RmiClientStart {
 
 	public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException {
 		HelloService service = (HelloService) Naming.lookup("rmi://189.48.80.221:5099/hello");
-		UtilsService utils = (UtilsService) Naming.lookup("rmi://189.48.80.221:5100/utils");
+		UtilsService utils = (UtilsService) Naming.lookup("rmi://189.48.80.221:5099/utils");
 		System.out.println(service.echo("hey"));
 		List<Pessoa> buscaPessoas = service.buscaPessoas();
 		
